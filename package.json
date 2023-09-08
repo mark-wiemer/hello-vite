@@ -14,7 +14,9 @@
         "lint_inner": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "packagejson": "sort-package-json --check",
         "packagejson_fix": "sort-package-json",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "tsc": "tsc && echo No TS problems",
+        "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && echo Ready for review"
     },
     "dependencies": {
         "react": "^18.2.0",
