@@ -13,4 +13,7 @@ export default defineConfig({
         setupFiles: './src/test/setup.ts',
         include: ['**/*.test.?(c|m)[jt]s?(x)'],
     },
+    server: {
+        port: 8080,
+    },
 });

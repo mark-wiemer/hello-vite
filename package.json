@@ -6,6 +6,7 @@
     "type": "module",
     "scripts": {
         "build": "tsc && vite build",
+        "ci": "start-test dev http-get://localhost:8080 playwright",
         "dev": "vite",
         "format": "npm run format_inner -- --check .",
         "format_fix": "npm run format_inner -- --write .",
@@ -54,6 +55,7 @@
         "lint-staged": "^14.0.1",
         "prettier": "3.0.3",
         "sort-package-json": "^2.5.1",
+        "start-server-and-test": "^2.0.0",
         "typescript": "^5.0.2",
         "vite": "^4.4.5",
         "vitest": "^0.34.3"
