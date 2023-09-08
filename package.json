@@ -23,7 +23,7 @@
     "lint-staged": {
         "*": "prettier --check",
         "src/**/*.ts*": [
-            "npm run eslint_inner",
+            "npm run lint_inner",
             "npm run tsc"
         ],
         "package.json": "npm run packagejson"
