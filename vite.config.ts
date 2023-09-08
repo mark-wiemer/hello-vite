@@ -14,5 +14,6 @@ export default defineConfig({
         // you might want to disable it, if you don't have tests that rely on CSS
         // since parsing CSS is slow
         css: true,
+        include: ['**/*.test.?(c|m)[jt]s?(x)'],
     },
 });

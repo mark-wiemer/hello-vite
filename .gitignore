@@ -25,3 +25,6 @@ dist-ssr
 
 # Husky
 .husky/_
+/test-results/
+/playwright-report/
+/playwright/.cache/

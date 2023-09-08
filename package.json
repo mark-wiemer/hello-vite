@@ -15,11 +15,12 @@
         "lint_inner": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "packagejson": "sort-package-json --check",
         "packagejson_fix": "sort-package-json",
+        "playwright": "playwright test",
         "prepare": "husky install",
         "preview": "vite preview",
         "test": "vitest --run",
         "tsc": "tsc && echo No TS problems",
-        "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && echo Ready for review",
+        "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && npm run playwright && echo Ready for review",
         "watch": "vitest"
     },
     "lint-staged": {
@@ -35,6 +36,7 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@playwright/test": "^1.37.1",
         "@testing-library/jest-dom": "^6.1.3",
         "@testing-library/react": "^14.0.0",
         "@testing-library/user-event": "^14.4.3",
