@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "build": "tsc && vite build",
-        "ci": "start-test dev http-get://localhost:8080 playwright",
+        "ci": "start-server-and-test dev http-get://localhost:8080 playwright",
         "dev": "vite",
         "format": "npm run format_inner -- --check .",
         "format_fix": "npm run format_inner -- --write .",
