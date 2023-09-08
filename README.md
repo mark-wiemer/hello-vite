@@ -1,8 +1,8 @@
-# Hello React + TypeScript + Vite
+# Hello Vite + React + TypeScript
 
-A batteries-included template project for React, TypeScript, and Vite.
+A batteries-included template project for Vite, React, and TypeScript
 
--   Created using `npm create vite@9.7.1 hello-vite-three-fiber -- --template react-ts`
+-   Created using `npm create vite@4.4.1 hello-vite-three-fiber -- --template react-ts`
 -   Added Prettier, sort-package-json, and a `validate` script
 
 ## TODO
