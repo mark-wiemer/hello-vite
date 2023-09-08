@@ -1,4 +1,4 @@
-# Hello Vite + React + TypeScript
+# Hello Vite
 
 A batteries-included template project for Vite, React, and TypeScript
 
