@@ -21,7 +21,7 @@
         "preview": "vite preview",
         "test": "vitest --run",
         "tsc": "tsc && echo No TS problems",
-        "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && npm run ci && echo Ready for review",
+        "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && npm run ci && echo Ready for review :)",
         "watch": "vitest"
     },
     "lint-staged": {
