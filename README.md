@@ -3,7 +3,7 @@
 A batteries-included template project for Vite, React, and TypeScript
 
 -   Created using `npm create vite@4.4.1 hello-vite-three-fiber -- --template react-ts`
--   Includes ESLint, Prettier, sort-package-json, Husky + lint-staged, and a `validate` script
+-   Includes [ESLint](https://eslint.org/), [Prettier](https://prettier.io), [Sort Package.json](https://github.com/keithamus/sort-package-json), [Husky](https://typicode.github.io/husky/), [lint-staged](https://github.com/okonet/lint-staged), and a `validate` script
 
 ## TODO
 
