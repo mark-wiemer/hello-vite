@@ -22,7 +22,7 @@
     },
     "lint-staged": {
         "*": "prettier --check",
-        "src/**/*.{ts,tsx}": [
+        "*.{ts,tsx}": [
             "npm run lint_inner",
             "npm run tsc"
         ],
