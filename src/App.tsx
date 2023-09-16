@@ -12,6 +12,9 @@ function Box(props: { position: [number, number, number] }) {
     // Subscribe this component to the render-loop, rotate the mesh every frame
     useFrame((_, delta) => (ref.current.rotation.x += delta));
     // Return the view, these are regular Threejs elements expressed in JSX
+
+    // const x = <CanvasTexture />;
+
     return (
         <mesh
             {...props}
