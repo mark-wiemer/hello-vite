@@ -7,10 +7,10 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <p>Hello Vite + React!</p>
+                <p>Hello Vite + React + TypeScript!</p>
                 <p>
                     <button type="button" onClick={increment}>
-                        count is: {count}
+                        Count is: {count}
                     </button>
                 </p>
                 <p>
@@ -19,20 +19,29 @@ function App() {
                 <p>
                     <a
                         className="App-link"
-                        href="https://reactjs.org"
+                        href="https://vite.dev"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Learn React
+                        Vite docs
                     </a>
                     {' | '}
                     <a
                         className="App-link"
-                        href="https://vitejs.dev/guide/features.html"
+                        href="https://react.dev"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Vite Docs
+                        React docs
+                    </a>
+                    {' | '}
+                    <a
+                        className="App-link"
+                        href="https://typescriptlang.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        TypeScript docs
                     </a>
                 </p>
             </header>
