@@ -17,20 +17,11 @@
         "packagejson": "sort-package-json --check",
         "packagejson_fix": "sort-package-json",
         "playwright": "playwright test",
-        "prepare": "husky install",
         "preview": "vite preview",
         "test": "vitest --run",
         "tsc": "tsc && echo No TS problems",
         "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && npm run ci && echo Ready for review :)",
         "watch": "vitest"
-    },
-    "lint-staged": {
-        "*": "prettier --check",
-        "*.{ts,tsx}": [
-            "npm run lint_inner",
-            "npm run tsc"
-        ],
-        "package.json": "npm run packagejson"
     },
     "dependencies": {
         "node": "^18.17.1",
@@ -51,9 +42,7 @@
         "eslint": "^8.45.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",
-        "husky": "^8.0.3",
         "jsdom": "^22.1.0",
-        "lint-staged": "^14.0.1",
         "prettier": "3.0.3",
         "sort-package-json": "^2.5.1",
         "start-server-and-test": "^2.0.0",
