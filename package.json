@@ -6,42 +6,31 @@
     "type": "module",
     "scripts": {
         "build": "tsc && vite build",
-        "ci": "start-server-and-test dev http-get://localhost:8080 playwright",
-        "dev": "vite",
-        "format": "npm run format_inner -- --check .",
-        "format_fix": "npm run format_inner -- --write .",
-        "format_inner": "prettier",
-        "lint": "npm run lint_inner -- src && echo No ESLint problems",
-        "lint_fix": "npm run lint_inner -- --fix src",
-        "lint_inner": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "ci": "start-server-and-test start http-get://localhost:8080 playwright",
+        "format": "npm run format:inner -- --check .",
+        "format:fix": "npm run format:inner -- --write .",
+        "format:inner": "prettier",
+        "postinstall": "npx playwright install",
+        "lint": "npm run lint:inner -- src && echo No ESLint problems",
+        "lint:fix": "npm run lint:inner -- --fix src",
+        "lint:inner": "eslint . --report-unused-disable-directives --max-warnings 0",
         "packagejson": "sort-package-json --check",
-        "packagejson_fix": "sort-package-json",
+        "packagejson:fix": "sort-package-json",
         "playwright": "playwright test",
-        "prepare": "husky install",
         "preview": "vite preview",
+        "start": "vite",
         "test": "vitest --run",
         "tsc": "tsc && echo No TS problems",
         "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && npm run ci && echo Ready for review :)",
+        "validate:fix": "npm run packagejson:fix && npm run format:fix && npm run lint:fix && npm run tsc && npm run test && npm run ci && echo Ready for review :)",
         "watch": "vitest"
     },
-    "lint-staged": {
-        "*": "prettier --check",
-        "*.{ts,tsx}": [
-            "npm run lint_inner",
-            "npm run tsc"
-        ],
-        "package.json": "npm run packagejson"
-    },
     "dependencies": {
-        "@react-three/drei": "9.78.1",
-        "@react-three/fiber": "8.13.4",
-        "@types/three": "0.153.0",
-        "node": "^18.17.1",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "three": "0.154.0"
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@eslint/js": "^9.29.0",
         "@playwright/test": "^1.37.1",
         "@testing-library/jest-dom": "^6.1.3",
         "@testing-library/react": "^14.0.0",
@@ -49,23 +38,18 @@
         "@types/jest": "^29.5.4",
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.7",
-        "@typescript-eslint/eslint-plugin": "^6.0.0",
-        "@typescript-eslint/parser": "^6.0.0",
         "@vitejs/plugin-react": "^4.0.3",
-        "eslint": "^8.45.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.3",
-        "husky": "^8.0.3",
-        "jsdom": "^22.1.0",
-        "lint-staged": "^14.0.1",
+        "eslint": "^9.29.0",
+        "jsdom": "^26.1.0",
         "prettier": "3.0.3",
         "sort-package-json": "^2.5.1",
         "start-server-and-test": "^2.0.0",
-        "typescript": "^5.0.2",
-        "vite": "^4.4.5",
-        "vitest": "^0.34.3"
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.34.1",
+        "vite": "^6.3.5",
+        "vitest": "^3.2.4"
     },
     "engines": {
-        "node": "^18"
+        "node": "^20 || ^22"
     }
 }
