@@ -75,10 +75,11 @@
 
                 scene = new THREE.Scene();
                 scene.background = new THREE.Color(0xefd1b5);
-                scene.fog = new THREE.FogExp2(0xefd1b5, 0.00015);
+                scene.fog = new THREE.FogExp2(0xefd1b5, 0.0025);
+
                 const data = generateHeight(worldWidth, worldDepth);
 
-                camera.position.set(100, 8000, -800);
+                camera.position.set(100, 800, -800);
                 camera.lookAt(-100, 810, -800);
 
                 const geometry = new THREE.PlaneGeometry(
@@ -118,11 +119,11 @@
                 container.appendChild(renderer.domElement);
 
                 controls = new FirstPersonControls(camera, renderer.domElement);
-                controls.movementSpeed = 1500;
-                controls.lookSpeed = 1;
+                controls.movementSpeed = 150;
+                controls.lookSpeed = 0.1;
 
-                // stats = new Stats();
-                // container.appendChild(stats.dom);
+                stats = new Stats();
+                container.appendChild(stats.dom);
 
                 //
 
@@ -140,7 +141,6 @@
 
             function generateHeight(width, height) {
                 let seed = Math.PI / 4;
-                // [0, 1) (never equal to 1)
                 window.Math.random = function () {
                     const x = Math.sin(seed++) * 10000;
                     return x - Math.floor(x);
@@ -228,8 +228,7 @@
                 imageData = image.data;
 
                 for (let i = 0, l = imageData.length; i < l; i += 4) {
-                    // Quick maths: 0-4 as an integer
-                    const v = ~~(Math.random() * -3);
+                    const v = ~~(Math.random() * 5);
 
                     imageData[i] += v;
                     imageData[i + 1] += v;
@@ -241,11 +240,13 @@
                 return canvasScaled;
             }
 
+            //
+
             function animate() {
                 requestAnimationFrame(animate);
 
                 render();
-                // stats.update();
+                stats.update();
             }
 
             function render() {
