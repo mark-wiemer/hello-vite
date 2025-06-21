@@ -21,8 +21,9 @@
         "start": "vite",
         "test": "vitest --run",
         "tsc": "tsc && echo No TS problems",
-        "validate": "npm run packagejson && npm run format && npm run lint && npm run tsc && npm run test && npm run ci && echo Ready for review :)",
-        "validate:fix": "npm run packagejson:fix && npm run format:fix && npm run lint:fix && npm run tsc && npm run test && npm run ci && echo Ready for review :)",
+        "validate": "npm run packagejson && npm run format && npm run lint && npm run validate:unfixable",
+        "validate:fix": "npm run packagejson:fix && npm run format:fix && npm run lint:fix && npm run validate:unfixable",
+        "validate:unfixable": "npm run tsc && npm run test && npm run ci && echo Ready for review :)",
         "watch": "vitest"
     },
     "dependencies": {
