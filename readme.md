@@ -1,6 +1,8 @@
-# Hello Vite
+# Hello React
 
-A batteries-included template project for Vite, React, and TypeScript using all my favorite tools. Also includes my favorite `package.json` npm scripts :)
+(Formerly Hello Vite or hello-vite)
+
+A batteries-included template project for React, Vite, and TypeScript using all my favorite tools. Also includes my favorite `package.json` npm scripts :)
 
 Tools, in alphabetical order:
 
