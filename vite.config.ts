@@ -12,7 +12,6 @@ export default defineConfig({
         // Unit tests include render tests, so we use jsdom for everything
         // This code will run in a browser anyway :)
         environment: 'jsdom',
-        setupFiles: './src/test/setup.ts',
         include: ['**/*.test.?(c|m)[jt]s?(x)'],
     },
     server: {
