@@ -8,5 +8,8 @@ export default tseslint.config(
     tseslint.configs.recommended,
     {
         ignores: ['dist'],
+        linterOptions: {
+            reportUnusedDisableDirectives: 'error',
+        },
     },
 );
